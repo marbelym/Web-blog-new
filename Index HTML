@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi página personal</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f0ff;
+  color: #49345c;
+  text-align: center;
+}
+header {
+  background: #b58bd2;
+  color: white;
+  padding: 55px 20px;
+}
+section {
+  padding: 35px 20px;
+  margin: 20px;
+  background: white;
+  border-radius: 15px;
+}
+h1 { font-size: 35px; }
+h2 { color: #9463b5; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>¡Bienvenidos a mi espacio!</h1>
+<p>Mi página personal y portafolio</p>
+</header>
+
+<section>
+<h2>Sobre mí</h2>
+<p>Hola, soy Marbely. Bienvenidos a mi página personal.</p>
+</section>
+
+<section>
+<h2>Mis fortalezas</h2>
+<p>Creatividad, responsabilidad y compromiso.</p>
+</section>
+
+<section>
+<h2>Mis habilidades</h2>
+<p>Conoce mis habilidades y capacidades.</p>
+</section>
+
+<section>
+<h2>Mis proyectos</h2>
+<p>Este espacio reúne algunos de mis proyectos.</p>
+</section>
+
+<section>
+<h2>Contacto</h2>
+<p>¡Gracias por visitar mi página!</p>
+</section>
+
+</body>
+</html>
