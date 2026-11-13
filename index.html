@@ -70,20 +70,22 @@ header {
 /* PORTADA */
 .portada {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 45px;
-  padding: 65px 8%;
-  min-height: 430px;
-}
-
-.portada-texto {
-  flex: 1;
+  gap: 15px;
+  padding: 45px 8%;
+  min-height: auto;
   text-align: center;
 }
 
+.portada .nombre {
+  font-size: 36px;
+  margin: 0;
+}
+
 .portada h1 {
-  font-size: 48px;
+  font-size: 42px;
   margin: 10px 0;
 }
 
@@ -92,9 +94,9 @@ header {
   line-height: 1.8;
 }
 
-.foto {
-  width: 280px;
-  height: 340px;
+.portada .foto {
+  width: 240px;
+  height: 290px;
   object-fit: cover;
   border-radius: 25px;
   border: 6px solid white;
