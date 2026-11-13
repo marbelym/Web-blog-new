@@ -68,20 +68,19 @@ header {
 }
 
 /* PORTADA */
-.portada {
+  .portada {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  padding: 45px 8%;
-  min-height: auto;
-  text-align: center;
+  gap: 45px;
+  padding: 65px 8%;
+  min-height: 430px;
 }
 
-.portada .nombre {
-  font-size: 36px;
-  margin: 0;
+.portada-texto {
+  flex: 1;
+  text-align: center;
 }
 
 .portada h1 {
@@ -94,9 +93,9 @@ header {
   line-height: 1.8;
 }
 
-.portada .foto {
-  width: 240px;
-  height: 290px;
+.foto {
+  width: 280px;
+  height: 340px;
   object-fit: cover;
   border-radius: 25px;
   border: 6px solid white;
@@ -175,20 +174,23 @@ footer {
 @media (max-width: 650px) {
 
   .portada {
-    flex-direction: column;
-    padding: 40px 20px;
-    gap: 25px;
-  }
+  flex-direction: column;
+  padding: 40px 20px;
+  gap: 20px;
+  text-align: center;
+}
 
-  .portada-texto {
-    order: 1;
-  }
+.portada-texto {
+  order: 2;
+  width: 100%;
+  text-align: center;
+}
 
-  .foto {
-    order: 2;
-    width: 80%;
-    max-width: 270px;
-    height: 300px;
+.portada .foto {
+  order: 1;
+  width: 80%;
+  max-width: 270px;
+  height: 300px;
   }
 
   .portada h1 {
@@ -230,21 +232,33 @@ footer {
 
 <main>
 
-<section class="portada portada-vertical" id="inicio">
+<section class="portada" id="inicio">
 
-  <p class="nombre script">Babi Merlo</p>
+  <img class="foto"
+       src="babi-presentacion.jpg"
+       alt="Fotografía de Babi">
 
-  <p class="script">¡Hola!</p>
+  <div class="portada-texto">
 
-  <img class="foto" src="babi-presentacion.jpg" alt="Fotografía de Babi">
+    <p class="script">¡Hola!</p>
 
-  <h1 class="seasons">Bienvenidos a mi espacio creativo</h1>
+    <h1 class="seasons">
+      Bienvenidos a mi espacio creativo
+    </h1>
 
-  <p>Un lugar donde la creatividad, la inspiración y la fe se unen en cada diseño.</p>
+    <p>
+      Un lugar donde la creatividad, la inspiración
+      y la fe se unen en cada diseño.
+    </p>
 
-  <p>Aquí podrás conocer un poco más sobre mí, mis intereses y mis metas.</p>
+    <p>
+      Aquí podrás conocer un poco más sobre mí,
+      mis intereses y mis metas.
+    </p>
 
-  <p class="script">¡Gracias por visitarme!</p>
+    <p class="script">¡Gracias por visitarme!</p>
+
+  </div>
 
 </section>
 
