@@ -102,6 +102,43 @@ header {
   box-shadow: 0 5px 18px #b58bd255;
 }
 
+/* SECCIÓN SOBRE MÍ */
+
+.sobre-mi {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 45px 8%;
+  background: #f3effa;
+  border-radius: 12px;
+}
+
+.sobre-mi-texto {
+  flex: 1;
+  text-align: center;
+}
+
+.sobre-mi h2 {
+  color: #b58bd2;
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.sobre-mi p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.foto-sobre-mi {
+  width: 280px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 5px;
+  }
+    
 /* SECCIONES */
 section {
   padding: 55px 8%;
@@ -172,7 +209,23 @@ footer {
 
 /* ADAPTACIÓN PARA TELÉFONOS */
 @media (max-width: 650px) {
+  .sobre-mi {
+    flex-direction: column;
+    padding: 35px 20px;
+    gap: 20px;
+  }
 
+  .sobre-mi-texto {
+    order: 1;
+    width: 100%;
+  }
+
+  .foto-sobre-mi {
+    order: 2;
+    width: 85%;
+    max-width: 280px;
+    height: 350px;
+  }
   .portada {
   flex-direction: column;
   padding: 40px 20px;
