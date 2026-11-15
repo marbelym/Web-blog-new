@@ -213,15 +213,47 @@ footer {
   padding: 35px 15px;
   text-align: center;
 }
+
+.marco-proyecto {
+  position: relative;
+  padding: 20px 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.marco-proyecto::before,
+.marco-proyecto::after {
+  content: "";
+  position: absolute;
+  top: 35%;
+  width: 20%;
+  height: 32%;
+  background: #dcbcf7;
+  z-index: 0;
+}
+
+.marco-proyecto::before {
+  left: 0;
+}
+
+.marco-proyecto::after {
+  right: 0;
+}
+
 .marco-proyecto img {
+  position: relative;
+  z-index: 1;
   display: block;
-  width: 85%;
+  width: 75%;
   max-width: 260px;
   height: 340px;
   object-fit: cover;
-  border-radius: 8px;
   margin: auto;
+  border-radius: 4px;
 }
+  
 /* ADAPTACIÓN PARA TELÉFONOS */
 @media (max-width: 650px) {
   .sobre-mi {
@@ -319,7 +351,15 @@ footer {
 }
 
 .marco-proyecto img {
-  height: 320px;
+  height: 300px;
+  max-width: 220px;
+}
+
+.marco-proyecto::before,
+.marco-proyecto::after {
+  width: 20%;
+  height: 30%;
+  top: 35%;
 }
 
 </style>
