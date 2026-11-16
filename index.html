@@ -254,6 +254,55 @@ footer {
   border-radius: 4px;
 }
   
+/* SECCIÓN MIS REDES */
+#redes {
+  text-align: center;
+  padding: 55px 8%;
+  background: #f3effa;
+  border-radius: 12px;
+  margin: 25px;
+}
+
+#redes h2 {
+  color: #b58bd2;
+  font-size: 38px;
+  margin-bottom: 40px;
+}
+
+.redes-sociales {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.red-social {
+  text-decoration: none;
+  color: #8b65aa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 10px;
+  border-radius: 20px;
+  background: #fffaff;
+  transition: transform 0.3s;
+}
+
+.red-social:hover {
+  transform: translateY(-7px);
+}
+
+.mariposa {
+  font-size: 85px;
+  filter: hue-rotate(35deg);
+  margin-bottom: 12px;
+}
+
+.red-social h3 {
+  color: #8b65aa;
+  font-size: 23px;
+  margin: 0;
+  }
+  
 /* ADAPTACIÓN PARA TELÉFONOS */
 @media (max-width: 650px) {
   .sobre-mi {
@@ -361,6 +410,29 @@ footer {
   height: 30%;
   top: 35%;
 }
+  
+#redes {
+  padding: 35px 15px;
+  margin: 15px;
+}
+
+#redes h2 {
+  font-size: 32px;
+}
+
+.redes-sociales {
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.red-social {
+  padding: 20px;
+}
+
+.mariposa {
+  font-size: 75px;
+}
+  
 
 </style>
 </head>
@@ -540,10 +612,39 @@ footer {
 </section>
   
 
-<section id="contacto">
-  <h2 class="script">Contacto</h2>
-  <p>¡Gracias por visitar mi espacio creativo!</p>
+
+<section id="redes">
+  <h2 class="script">¡Visita mis redes!</h2>
+
+  <div class="redes-sociales">
+
+    <a class="red-social"
+       href="https://pin.it/6hG4HHyTP"
+       target="_blank"
+       rel="noopener">
+      <span class="mariposa">🦋</span>
+      <h3 class="seasons">Pinterest</h3>
+    </a>
+
+    <a class="red-social"
+       href="PEGA_AQUI_TU_ENLACE_DE_THREADS"
+       target="_blank"
+       rel="noopener">
+      <span class="mariposa">🦋</span>
+      <h3 class="seasons">Threads</h3>
+    </a>
+
+    <a class="red-social"
+       href="PEGA_AQUI_TU_ENLACE_DE_INSTAGRAM"
+       target="_blank"
+       rel="noopener">
+      <span class="mariposa">🦋</span>
+      <h3 class="seasons">Instagram</h3>
+    </a>
+
+  </div>
 </section>
+  
 
 </main>
 
