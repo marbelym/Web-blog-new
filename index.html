@@ -303,6 +303,57 @@ footer {
   margin: 0;
   }
   
+/* MI GALERÍA CREATIVA */
+#galeria {
+  text-align: center;
+  padding: 50px 8%;
+  background: #f3effa;
+  border-radius: 12px;
+  margin: 25px;
+}
+
+#galeria h2 {
+  color: #b58bd2;
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+#galeria > p {
+  color: #8b65aa;
+  font-size: 17px;
+  margin-bottom: 35px;
+}
+
+.galeria-collage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 180px;
+  gap: 18px;
+}
+
+.foto-galeria {
+  overflow: hidden;
+  border: 6px solid white;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px #b58bd255;
+  background: white;
+}
+
+.foto-galeria.grande {
+  grid-row: span 2;
+}
+
+.foto-galeria.alta {
+  grid-row: span 2;
+}
+
+.foto-galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+  
 /* ADAPTACIÓN PARA TELÉFONOS */
 @media (max-width: 650px) {
   .sobre-mi {
@@ -432,6 +483,29 @@ footer {
 .mariposa {
   font-size: 75px;
 }
+  
+#galeria {
+  padding: 35px 15px;
+  margin: 15px;
+}
+
+#galeria h2 {
+  font-size: 32px;
+}
+
+.galeria-collage {
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 140px;
+  gap: 12px;
+}
+
+.foto-galeria.grande {
+  grid-row: span 2;
+}
+
+.foto-galeria.alta {
+  grid-row: span 2;
+  }
   
 
 </style>
@@ -611,7 +685,39 @@ footer {
   </div>
 </section>
   
+<section id="galeria">
+  <h2 class="script">Mi galería creativa</h2>
+  <p>Un poquito de inspiración y creatividad.</p>
 
+  <div class="galeria-collage">
+
+    <div class="foto-galeria grande">
+      <img src="https://placehold.co/600x800/e8d9f5/8b65aa?text=Mi+foto+1" alt="Imagen 1">
+    </div>
+
+    <div class="foto-galeria">
+      <img src="https://placehold.co/600x500/f0e5fa/8b65aa?text=Mi+foto+2" alt="Imagen 2">
+    </div>
+
+    <div class="foto-galeria alta">
+      <img src="https://placehold.co/600x800/dfc9ef/8b65aa?text=Mi+foto+3" alt="Imagen 3">
+    </div>
+
+    <div class="foto-galeria">
+      <img src="https://placehold.co/600x500/eee3f7/8b65aa?text=Mi+foto+4" alt="Imagen 4">
+    </div>
+
+    <div class="foto-galeria grande">
+      <img src="https://placehold.co/600x800/e4d5f2/8b65aa?text=Mi+foto+5" alt="Imagen 5">
+    </div>
+
+    <div class="foto-galeria">
+      <img src="https://placehold.co/600x500/f3eafa/8b65aa?text=Mi+foto+6" alt="Imagen 6">
+    </div>
+
+  </div>
+</section>
+  
 
 <section id="redes">
   <h2 class="script">¡Visita mis redes!</h2>
@@ -653,5 +759,35 @@ footer {
   <p>Creatividad, inspiración y fe.</p>
 </footer>
 
+<script>
+const fotos = document.querySelectorAll(
+  '.foto-galeria'
+);
+
+let fotoMovida = null;
+
+fotos.forEach(foto => {
+  foto.style.touchAction = 'none';
+
+  foto.addEventListener('pointerdown', e => {
+    fotoMovida = foto;
+    foto.style.zIndex = '10';
+    foto.setPointerCapture(e.pointerId);
+  });
+
+  foto.addEventListener('pointermove', e => {
+    if (fotoMovida !== foto) return;
+
+    foto.style.transform =
+      `translate(${e.movementX}px, ${e.movementY}px)`;
+  });
+
+  foto.addEventListener('pointerup', () => {
+    foto.style.zIndex = '1';
+    fotoMovida = null;
+  });
+});
+</script>
+  
 </body>
 </html>
