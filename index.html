@@ -234,12 +234,22 @@ footer {
 .marco-proyecto::after {
   content: "";
   position: absolute;
-  width: 48px;
-  height: 18px;
+  width: 12px;
+  height: 45px;
   background: #e1c3ff;
-  opacity: 0.95;
   z-index: 2;
-  border-radius: 2px;
+  border-radius: 0;
+  transform: none;
+}
+
+.marco-proyecto::before {
+  top: 55%;
+  left: -6px;
+}
+
+.marco-proyecto::after {
+  top: 30%;
+  right: -6px;
 }
 
 .marco-proyecto::before {
