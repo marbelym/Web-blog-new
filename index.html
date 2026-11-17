@@ -262,7 +262,26 @@ footer {
   margin: auto;
   border-radius: 5px;
 }
-  
+ .marco-proyecto::before,
+.marco-proyecto::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 8px;
+  background: #e1c3ff;
+  z-index: 2;
+  border-radius: 1px;
+}
+
+.marco-proyecto::before {
+  top: 12px;
+  left: 0;
+}
+
+.marco-proyecto::after {
+  top: 12px;
+  right: 0;
+} 
 /* SECCIÓN MIS REDES */
 #redes {
   text-align: center;
