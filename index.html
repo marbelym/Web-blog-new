@@ -194,24 +194,12 @@ section p {
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "uno dos"
-    "uno tres";
-  gap: 22px;
-  max-width: 850px;
+    "tres cuatro";
+  gap: 25px;
+  max-width: 650px;
   margin: 30px auto;
   align-items: center;
-}
-
-.proyectos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "uno dos"
-    "uno tres"
-    "cuatro tres";
-  gap: 22px;
-  max-width: 850px;
-  margin: 30px auto;
-  align-items: center;
+  justify-items: center;
 }
 
 .proyecto {
@@ -220,6 +208,7 @@ section p {
   border-radius: 12px;
   text-align: center;
   min-width: 0;
+  width: 100%;
 }
 
 .proyecto:nth-child(1) {
@@ -237,7 +226,6 @@ section p {
 .proyecto:nth-child(4) {
   grid-area: cuatro;
 }
-
 .proyecto img {
   display: block;
   width: 100%;
