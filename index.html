@@ -201,6 +201,19 @@ section p {
   align-items: center;
 }
 
+.proyectos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "uno dos"
+    "uno tres"
+    "cuatro tres";
+  gap: 22px;
+  max-width: 850px;
+  margin: 30px auto;
+  align-items: center;
+}
+
 .proyecto {
   background: transparent;
   padding: 8px;
@@ -219,6 +232,10 @@ section p {
 
 .proyecto:nth-child(3) {
   grid-area: tres;
+}
+
+.proyecto:nth-child(4) {
+  grid-area: cuatro;
 }
 
 .proyecto img {
