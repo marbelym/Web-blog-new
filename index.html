@@ -246,7 +246,32 @@ section p {
   border-radius: 5px;
   object-fit: cover;
 }
-  
+ /* ORDENAR PROYECTOS COMO COLLAGE */
+.proyectos {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+    "uno dos"
+    "tres cuatro";
+  gap: 25px 14px;
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  align-items: center;
+  justify-items: center;
+}
+
+.proyecto {
+  width: 100%;
+  min-width: 0;
+  padding: 5px;
+  text-align: center;
+  transform: none !important;
+}
+
+.proyecto .marco-proyecto {
+  margin: 10px auto;
+} 
 
 /* PIE DE PÁGINA */
 footer {
