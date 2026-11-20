@@ -272,7 +272,40 @@ section p {
 .proyecto .marco-proyecto {
   margin: 10px auto;
 } 
+/* COLLAGE DE SEIS PROYECTOS */
+.proyectos {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas: none;
+  gap: 22px 16px;
+  max-width: 600px;
+  width: 100%;
+  margin: 30px auto;
+  align-items: center;
+}
 
+.proyecto {
+  grid-area: auto !important;
+  width: 100%;
+  padding: 5px;
+  transform: none !important;
+  text-align: center;
+}
+
+.proyecto:nth-child(1) .marco-proyecto { max-width: 250px; }
+.proyecto:nth-child(2) .marco-proyecto { max-width: 210px; }
+.proyecto:nth-child(3) .marco-proyecto { max-width: 225px; }
+.proyecto:nth-child(4) .marco-proyecto { max-width: 210px; }
+.proyecto:nth-child(5) .marco-proyecto { max-width: 230px; }
+.proyecto:nth-child(6) .marco-proyecto { max-width: 245px; }
+
+/* CINTAS A MEDIA ALTURA */
+.marco-proyecto::before,
+.marco-proyecto::after {
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+}
 /* PIE DE PÁGINA */
 footer {
   background: var(--lila);
