@@ -195,7 +195,7 @@ section p {
   grid-template-areas:
     "uno dos"
     "tres cuatro";
-  gap: 25px;
+  gap: 35px 25px;
   max-width: 650px;
   margin: 30px auto;
   align-items: center;
@@ -225,6 +225,19 @@ section p {
 
 .proyecto:nth-child(4) {
   grid-area: cuatro;
+}
+  /* EFECTO COLLAGE INTERCALADO */
+
+.proyecto:nth-child(2) {
+  transform: translateY(30px);
+}
+
+.proyecto:nth-child(3) {
+  transform: translateY(15px);
+}
+
+.proyecto:nth-child(4) {
+  transform: translateY(35px);
 }
 .proyecto img {
   display: block;
