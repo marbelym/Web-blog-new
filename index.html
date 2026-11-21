@@ -276,32 +276,22 @@ section p {
 .proyectos {
   display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(4, 95px);
-  grid-template-areas:
-    "uno dos"
-    "uno tres"
-    "cuatro tres"
-    "cinco seis";
-  gap: 12px;
-  max-width: 600px;
+  gap: 24px 18px;
+  max-width: 1000px;
   width: 100%;
-  margin: 25px auto;
+  margin: 30px auto;
+  align-items: start;
 }
 
 .proyecto {
-  grid-area: auto !important;
   width: 100%;
+  min-width: 0;
   padding: 0;
   margin: 0;
   transform: none !important;
+  text-align: center;
+  break-inside: avoid;
 }
-
-.proyecto:nth-child(1) { grid-area: uno; }
-.proyecto:nth-child(2) { grid-area: dos; }
-.proyecto:nth-child(3) { grid-area: tres; }
-.proyecto:nth-child(4) { grid-area: cuatro; }
-.proyecto:nth-child(5) { grid-area: cinco; }
-.proyecto:nth-child(6) { grid-area: seis; }
 
 .proyecto h3,
 .proyecto p {
@@ -311,16 +301,19 @@ section p {
 .proyecto .marco-proyecto {
   width: 100%;
   max-width: none;
-  height: 100%;
+  height: auto;
   margin: 0;
 }
 
 .proyecto .marco-proyecto img {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
 }
 
+/* CINTAS A MEDIA ALTURA */
 .marco-proyecto::before,
 .marco-proyecto::after {
   top: 50%;
