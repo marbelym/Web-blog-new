@@ -188,109 +188,53 @@ section p {
   
 
 
-* PROYECTOS */
+/* NUEVO COLLAGE DE PROYECTOS */
 .proyectos {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "uno dos"
-    "tres cuatro";
-  gap: 35px 25px;
-  max-width: 650px;
-  margin: 30px auto;
-  align-items: center;
-  justify-items: center;
-}
-
-.proyecto {
-  background: transparent;
-  padding: 8px;
-  border-radius: 12px;
-  text-align: center;
-  min-width: 0;
-  width: 100%;
-}
-
-.proyecto:nth-child(1) {
-  grid-area: uno;
-}
-
-.proyecto:nth-child(2) {
-  grid-area: dos;
-}
-
-.proyecto:nth-child(3) {
-  grid-area: tres;
-}
-
-.proyecto:nth-child(4) {
-  grid-area: cuatro;
-}
-  /* EFECTO COLLAGE INTERCALADO */
-
-.proyecto:nth-child(2) {
-  transform: translateY(30px);
-}
-
-.proyecto:nth-child(3) {
-  transform: translateY(15px);
-}
-
-.proyecto:nth-child(4) {
-  transform: translateY(35px);
-}
-.proyecto img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  object-fit: cover;
-}
- /* ORDENAR PROYECTOS COMO COLLAGE */
-.proyectos {
-  display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-areas:
-    "uno dos"
-    "tres cuatro";
-  gap: 25px 14px;
+  gap: 18px 12px;
+  max-width: 950px;
   width: 100%;
-  max-width: 600px;
-  margin: 30px auto;
-  align-items: center;
-  justify-items: center;
-}
-
-.proyecto {
-  width: 100%;
-  min-width: 0;
-  padding: 5px;
-  text-align: center;
-  transform: none !important;
-}
-
-.proyecto .marco-proyecto {
-  margin: 10px auto;
-} 
-/* COLLAGE DE PROYECTOS */
-.proyectos {
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px 18px;
-  max-width: 1000px;
-  width: 100%;
-  margin: 30px auto;
+  margin: 35px auto;
+  padding: 15px;
   align-items: start;
 }
 
 .proyecto {
+  position: relative;
   width: 100%;
-  min-width: 0;
-  padding: 0;
+  padding: 7px;
   margin: 0;
-  transform: none !important;
-  text-align: center;
-  break-inside: avoid;
+  background: #fff;
+  border: 2px solid #333;
+  box-shadow: 6px 6px 0 #333;
+  border-radius: 2px;
+  z-index: 1;
+  cursor: grab;
+  touch-action: pan-y;
+  transition: box-shadow 0.2s;
+}
+
+.proyecto:nth-child(2),
+.proyecto:nth-child(4),
+.proyecto:nth-child(6) {
+  margin-top: 35px;
+}
+
+.proyecto:nth-child(3) {
+  margin-top: -20px;
+}
+
+.proyecto:nth-child(5) {
+  margin-top: 15px;
+}
+
+.proyecto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
 }
 
 .proyecto h3,
@@ -298,38 +242,33 @@ section p {
   display: none;
 }
 
-.proyecto .marco-proyecto {
-  width: 100%;
-  max-width: none;
-  height: auto;
-  margin: 0;
-}
+/* COLLAGE EN TELÉFONOS */
+@media (max-width: 650px) {
+  .proyectos {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 15px 10px;
+    max-width: 500px;
+  }
 
-.proyecto .marco-proyecto img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 5px;
-}
+  .proyecto {
+    width: 90%;
+    margin: 0 0 -35px 0 !important;
+  }
 
-/* CINTAS A MEDIA ALTURA */
-.marco-proyecto::before,
-.marco-proyecto::after {
-  top: 50%;
-  bottom: auto;
-  transform: translateY(-50%);
-}
-  /* AMPLIAR TODOS LOS PROYECTOS */
-.proyecto .marco-proyecto {
-  max-width: 100% !important;
-  width: 100%;
-}
+  .proyecto:nth-child(even) {
+    margin-left: auto !important;
+  }
 
-.proyecto .marco-proyecto img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+  .proyecto:nth-child(odd) {
+    margin-right: auto !important;
+  }
+
+  .proyecto:nth-child(2),
+  .proyecto:nth-child(4),
+  .proyecto:nth-child(6) {
+    margin-top: 0;
+  }
 }
 /* PIE DE PÁGINA */
 footer {
