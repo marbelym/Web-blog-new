@@ -221,32 +221,36 @@ section p {
   touch-action: pan-y;
   transition: box-shadow 0.2s;
 }
-  .proyecto:nth-child(2) {
-  margin-top: -60px;
-}
-
-.proyecto:nth-child(3) {
-  margin-top: 20px;
-}
-
-.proyecto:nth-child(4) {
-  margin-top: -70px;
-}
-
-.proyecto:nth-child(5) {
-  margin-top: -30px;
-}
-
+  .proyecto:nth-child(2),
+.proyecto:nth-child(3),
+.proyecto:nth-child(4),
+.proyecto:nth-child(5),
 .proyecto:nth-child(6) {
-  margin-top: -55px;
+  margin-top: 0;
 }
 
 .proyecto img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain;
   border-radius: 0;
+}
+
+.proyecto:nth-child(1),
+.proyecto:nth-child(4) {
+  aspect-ratio: 16 / 9;
+}
+
+.proyecto:nth-child(2),
+.proyecto:nth-child(3),
+.proyecto:nth-child(5),
+.proyecto:nth-child(6) {
+  aspect-ratio: 3 / 4;
+}
+
+.proyecto img {
+  object-fit: contain;
 }
 
 .proyecto h3,
