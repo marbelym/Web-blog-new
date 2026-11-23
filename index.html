@@ -233,7 +233,13 @@ section p {
 }
 
 /* OCULTAR IMÁGENES Y TEXTOS POR AHORA */
-.proyecto img,
+.proyecto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .proyecto h3,
 .proyecto p {
   display: none;
@@ -830,11 +836,11 @@ footer {
 
   <div class="proyectos">
 
-    <div class="proyecto">
-      <div class="marco-proyecto">
-        <img src="https://placehold.co/600x800/e9def5/8b65aa?text=Mi+diseno+1"
-             alt="Diseño creativo 1">
-      </div>
+  <div class="proyecto">
+    <div class="marco-proyecto">
+      <img src="diseno-1.png" alt="Diseño creativo 1">
+    </div>
+  </div>
       <h3 class="seasons">Diseño 1</h3>
       <p>Una creación llena de creatividad.</p>
     </div>
