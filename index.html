@@ -264,22 +264,6 @@ footer {
   overflow: visible;
 }
 
-.marco-proyecto::before,
-.marco-proyecto::after {
-  content: "";
-  position: absolute;
-  width: 10%;
-  height: 30%;
-  background: #e1c3ff;
-  opacity: 0.65;
-  z-index: 2;
-}
-
-.marco-proyecto::before {
-  top: 30%;
-  left: -5px;
-}
-
 .marco-proyecto::after {
   top: 30%;
   right: -5px;
@@ -580,60 +564,6 @@ footer {
   margin: auto;
   border-radius: 5px;
 }
-/* TAMAÑOS DIFERENTES PARA CADA FOTO */
-
-.proyecto:nth-child(1) .marco-proyecto {
-  max-width: 260px;
-}
-
-.proyecto:nth-child(1) .marco-proyecto img {
-  aspect-ratio: 3 / 4;
-}
-
-.proyecto:nth-child(2) .marco-proyecto {
-  max-width: 230px;
-}
-
-.proyecto:nth-child(2) .marco-proyecto img {
-  aspect-ratio: 5 / 3;
-}
-
-.proyecto:nth-child(3) .marco-proyecto {
-  max-width: 200px;
-}
-
-.proyecto:nth-child(3) .marco-proyecto img {
-  aspect-ratio: 4 / 5;
-}
-  .proyecto:nth-child(4) .marco-proyecto {
-  max-width: 230px;
-}
-
-.proyecto:nth-child(4) .marco-proyecto img {
-  aspect-ratio: 4 / 5;
-}
-/* CINTAS DECORATIVAS */
-.marco-proyecto::before,
-.marco-proyecto::after {
-  content: "";
-  position: absolute;
-  width: 13px;
-  height: 42px;
-  background: #e1c3ff;
-  opacity: 0.7;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.marco-proyecto::before {
-  top: 18%;
-  left: -5px;
-}
-
-.marco-proyecto::after {
-  bottom: 18%;
-  right: -5px;
-}
   
 #redes {
   padding: 35px 15px;
@@ -835,11 +765,15 @@ footer {
   </p>
 
   <div class="proyectos">
-
+    
   <div class="proyecto">
-    <div class="marco-proyecto">
-      <img src="diseno-1.png" alt="Diseño creativo 1">
-    </div>
+  <div class="marco-proyecto">
+    <img src="diseno-1.png" alt="Diseño creativo 1">
+  </div>
+  <h3 class="seasons">Diseño 1</h3>
+  <p>Una creación llena de creatividad.</p>
+  </div>
+    
   </div>
       <h3 class="seasons">Diseño 1</h3>
       <p>Una creación llena de creatividad.</p>
